@@ -14,16 +14,24 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <style>
-        .main { padding: 30px; }
-        .pad-content { padding-bottom: 15px; }
-    </style>
-
 </head>
 
 <body>
 
     <section class="main">
+
+        <div class="row">
+            <div class="col-lg-12 pad-content">
+
+                <!-- form for adding an animal -->
+                <form>
+                    <label>Add an Animal</label>
+                    <input type="text" id="addbutton-input">
+                    <input id="add-button" type="submit" value="Add an Animal">
+                </form>
+
+            </div>
+        </div>
 
         <div class="row">
 
@@ -34,7 +42,15 @@
                             <h3 class="panel-title">Tags</h3>
                         </div>
                         <div class="panel-body">
-                            <h1>Tags go here</h1>
+
+                            <!-- tags go here -->
+                            <div class="test">
+                                <button data-animal="cat">meow</button>
+                                <button data-animal="dog">woof</button>
+                                <button data-animal="bird">chirp</button>
+                                <button data-animal="pig">pig</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -47,6 +63,9 @@
                         </div>
                         <div class="panel-body">
                             <h1>GIFs go here</h1>
+
+                            <!-- gifs appear here -->
+                            <div id="gifs-appear-here"></div>
                         </div>
                     </div>
                 </div>
