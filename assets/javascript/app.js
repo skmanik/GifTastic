@@ -17,7 +17,7 @@ $(document).ready(function() {
         for (var i = 0; i < topicsArr.length; i++) {
         
             var tagButton = $("<button>");
-            tagButton.attr("data-movie", topicsArr[i]);
+            tagButton.attr("data-movie", topicsArr[i]).addClass("tag");
             tagButton.text(topicsArr[i]);
 
             $("#tag-content").append(tagButton);
@@ -33,11 +33,19 @@ $(document).ready(function() {
 
         var textInput = $("#addbutton-input").val().trim();
 
+        if (textInput === "") {
+            return;
+        }
+
+        else {
+
         topicsArr.push(textInput);
         console.log(topicsArr);
         
         // display
         updateButtons();
+
+        }
 
     });
 
@@ -63,14 +71,14 @@ $(document).ready(function() {
                 var movieDiv = $("<div>");
                 
                 var p = $("<p>");
-                p.text(results[i].rating);
+                p.text("rating: " + results[i].rating);
 
                 var movieImage = $("<img>");
                 movieImage.attr("src", results[i].images.fixed_height.url);
 
                 // display
-                movieDiv.append(p);
                 movieDiv.append(movieImage);
+                movieDiv.append(p);
                 $("#gifs-content").append(movieDiv);
 
             }

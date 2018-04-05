@@ -1,7 +1,90 @@
-.main { 
-    padding: 30px; 
+body {
+    background-color: #B4B8D3;
+    color: #4e4a46;
 }
 
 .pad-content { 
     padding-bottom: 15px; 
+}
+
+.main { 
+    padding: 0 30px 30px 30px; 
+}
+
+.main .user-input {
+    text-align: center;
+    margin: 0 -30px 45px -30px;
+    padding: 90px 20px 0px 20px;
+}
+
+.main #addbutton-input {
+    background: transparent;
+    box-shadow: none;
+    border: 0px;
+    border-bottom: 3px solid #8b8ea2;
+    display: inline-block;
+    font-size: 2.5em;
+    min-width: 55%;
+    padding-bottom: 3px;
+    outline: none;
+}
+
+.main #add-button {
+    position: relative;
+    top: -6px;
+    margin: 0 15px;
+    padding: 20px 55px;
+    border: 0;
+    box-shadow: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    background: #c94e50;
+    color: #fefde0;
+    outline: none;
+}
+
+.main .panel {
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+    border: none;
+}
+
+.main .panel-body {
+    padding: 0 15px;
+}
+
+.main .tag-column {
+    box-shadow: inset -2px 0 0 #8a8da2ad;
+}
+
+.main #tag-content {
+    text-align: right;
+}
+
+.main #tag-content .tag {
+    margin: 0 10px 10px 0;
+    padding: 15px 25px;
+    border: 0;
+    box-shadow: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: #FEFEE0;
+    border-radius: 2px;
+    color: #4e4a46;
+    outline: none;
+}
+
+.main #gifs-content {
+    padding-left: 10px;
+}
+
+.main #gifs-content > div {
+    float: left;
+    margin: 0 15px 15px 0;
 }
