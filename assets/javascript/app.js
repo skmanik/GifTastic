@@ -4,7 +4,7 @@ $(document).ready(function() {
     // ======================================
 
     // our array of classic movies
-    var topicsArr = ["the big sleep", "vertigo", "casablanca", "citizen kane", "an american in paris", "psycho", "rear window", "a streetcar named desire", "gone with the wind", "miracle on 34th street", "duck soup", "seven samurai", "rashomon", "the maltese falcon"];
+    var topicsArr = ["the big sleep", "vertigo", "casablanca", "citizen kane", "an american in paris", "psycho", "rear window", "a streetcar named desire", "gone with the wind", "key largo", "miracle on 34th street", "duck soup", "seven samurai", "rashomon", "his girl friday", "the maltese falcon"];
 
     // ============== actions ===============
     // ======================================
@@ -53,6 +53,8 @@ $(document).ready(function() {
     $(document.body).on("click", "button", function () {
 
         // display
+        $("#tag-content button").removeClass("active");
+        $(this).addClass("active");
         $("#gifs-content").empty();
 
         var movie = $(this).attr("data-movie");
@@ -69,12 +71,13 @@ $(document).ready(function() {
             for (var i = 0; i < results.length; i++) {
 
                 var movieDiv = $("<div>");
-                
                 var p = $("<p>");
-                p.text("rating: " + results[i].rating);
-
                 var movieImage = $("<img>");
-                movieImage.attr("src", results[i].images.fixed_height.url);
+
+                p.text("rating: " + results[i].rating);
+                movieImage.attr("src", results[i].images.fixed_height_still.url).addClass("img-responsive");
+                movieImage.attr("data-still", "true");
+                movieImage.attr("data-number", i);
 
                 // display
                 movieDiv.append(movieImage);
@@ -83,7 +86,30 @@ $(document).ready(function() {
 
             }
 
+            $("#gifs-content img").on("click", function () {
+
+                var gifNumber = $(this).attr("data-number");
+                console.log("Is this working?");
+                console.log(gifNumber);
+
+                if ($(this).attr("data-still") === "true") {
+                    
+                    $(this).attr("src", results[gifNumber].images.fixed_height.url);
+                    $(this).attr("data-still", "false");
+
+                }
+
+                else if ($(this).attr("data-still") === "false") {
+
+                    $(this).attr("src", results[gifNumber].images.fixed_height_still.url);
+                    $(this).attr("data-still", "true");
+
+                }
+
+            });
+
         });
+
     });
 
     // presents initial tag display when page first loads

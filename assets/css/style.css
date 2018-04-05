@@ -55,6 +55,7 @@ body {
 
 .main .panel-body {
     padding: 0 15px;
+    clear: both;
 }
 
 .main .tag-column {
@@ -87,4 +88,28 @@ body {
 .main #gifs-content > div {
     float: left;
     margin: 0 15px 15px 0;
+}
+
+.main #gifs-content h4 {
+    font-size: 2em;
+    font-weight: 400;
+    font-style: italic;
+    color: #757575;
+    margin-top: 0;
+    text-transform: lowercase;
+}
+
+.main #gifs-content p {
+    margin: 5px 0 10px;
+    font-weight: 700;
+    color: #757575;
+}
+
+.main #gifs-content img {
+    cursor: pointer;
+}
+
+.main #tag-content .active {
+    background: #c94e50;
+    color: #fefde0;
 }
