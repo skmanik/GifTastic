@@ -4,7 +4,7 @@ $(document).ready(function() {
     // ======================================
 
     // our array of classic movies
-    var topicsArr = ["the big sleep", "vertigo", "casablanca", "citizen kane", "an american in paris", "psycho", "rear window", "a streetcar named desire", "gone with the wind", "key largo", "miracle on 34th street", "duck soup", "seven samurai", "rashomon", "his girl friday", "the maltese falcon"];
+    var topicsArr = ["the big sleep", "vertigo", "casablanca", "citizen kane", "an american in paris", "psycho", "rear window", "a streetcar named desire", "gone with the wind", "key largo", "miracle on 34th street", "duck soup", "seven samurai", "rashomon", "his girl friday", "the maltese falcon", "the birds", "carnival of souls"];
 
     // ============== actions ===============
     // ======================================
@@ -86,6 +86,7 @@ $(document).ready(function() {
 
             }
 
+            // function that toggles the gifs on and off
             $("#gifs-content img").on("click", function () {
 
                 var gifNumber = $(this).attr("data-number");

@@ -8,7 +8,7 @@ body {
 }
 
 .main { 
-    padding: 0 30px 30px 30px; 
+    padding: 0 30px 60px 30px; 
 }
 
 .main .user-input {
@@ -24,7 +24,7 @@ body {
     border-bottom: 3px solid #8b8ea2;
     display: inline-block;
     font-size: 2.5em;
-    min-width: 55%;
+    width: 55%;
     padding-bottom: 3px;
     outline: none;
 }
@@ -32,7 +32,7 @@ body {
 .main #add-button {
     position: relative;
     top: -6px;
-    margin: 0 15px;
+    margin: 0 0 0 15px;
     padding: 20px 55px;
     border: 0;
     box-shadow: none;
@@ -109,7 +109,43 @@ body {
     cursor: pointer;
 }
 
+/* animation */
+
 .main #tag-content .active {
     background: #c94e50;
     color: #fefde0;
+}
+
+.main #add-button:hover,
+.main #add-button:active {
+    background: #b54546;
+}
+
+/* adding some extra responsiveness bc my styling is dumb */
+
+@media screen and (max-width: 1200px) {
+
+    .main .tag-column {
+        box-shadow: none;
+    }
+
+    .main #tag-content {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .main #addbutton-input {
+        display: block;
+        width: 100%;
+    }
+
+    .main #add-button { 
+        display: block;
+        width: 100%;
+        margin: 25px 0 0 0;
+    }
+
 }
