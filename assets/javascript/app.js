@@ -27,7 +27,7 @@ $(document).ready(function() {
     };
 
     // function that lets user add to array and updates tag display
-    $("#add-button").on("click", function () {
+    $("#add-button").on("click", function(event) {
 
         event.preventDefault();
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
     });
 
     // function that presents giphy gifs when user clicks tags 
-    $(document.body).on("click", "button", function () {
+    $(document.body).on("click", "button", function() {
 
         // display
         $("#tag-content button").removeClass("active");
@@ -86,8 +86,8 @@ $(document).ready(function() {
 
             }
 
-            // function that toggles the gifs on and off
-            $("#gifs-content img").on("click", function () {
+            // function that toggles above gifs on and off
+            $("#gifs-content img").on("click", function() {
 
                 var gifNumber = $(this).attr("data-number");
                 console.log("Is this working?");
