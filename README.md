@@ -1,6 +1,6 @@
 # GifTastic
 
-Simple tool that conjures up classic movie GIFs; uses GIPHY API.
+Simple tool that conjures up classic movie GIFs. Uses GIPHY API.
 
 Live site: https://skmanik.github.io/GifTastic/
 
